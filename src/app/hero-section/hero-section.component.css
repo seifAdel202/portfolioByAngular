@@ -1,0 +1,140 @@
+.hero-section {
+  background: url(../../assets/img/hero_1.jpg) no-repeat center;
+  background-size: cover;
+  width: 100%;
+  align-items: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .container {
+    height: 100vh;
+    width: 80%;
+    z-index: 1;
+    position: relative;
+    gap: 2rem;
+
+    .content-header {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      justify-content: center;
+      text-align: left;
+      gap: 1rem;
+      .autocomplete-text {
+        font-size: 1.5em;
+        display: inline-block;
+        border-right: 2px solid rgba(0, 0, 0, 0.75);
+        white-space: nowrap;
+        overflow: hidden;
+        animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+        span {
+          color: var(--secondary-color);
+          text-transform: uppercase;
+        }
+      }
+      h5 {
+        font-size: 2rem;
+        font-weight: 300;
+      }
+      p {
+        font-size: 15px;
+      }
+      a {
+        span {
+          font-size: 1rem;
+          font-family: 400;
+        }
+      }
+    }
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--secondary-color);
+  }
+}
+.hero-section .container .contact--button {
+  background-color: var(--secondary-color);
+  color: var(--white-color);
+  font-size: 16px;
+  text-decoration: none;
+  transition: 0.3s all ease-in-out;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 3rem;
+  .icon-wp {
+    font-size: 20px;
+    text-align: center;
+  }
+}
+
+.hero-section .container .contact--button:hover {
+  background-color: var(--hover-color);
+  color: var(--white-color);
+}
+
+@media (max-width: 991px) {
+  .hero-section {
+    .container {
+      height: 100vh;
+      width: 90%;
+      z-index: 1;
+      position: relative;
+      gap: 2rem;
+      padding: 4rem 0;
+
+      .content-header {
+        margin: 0 auto;
+
+        .autocomplete-text {
+          font-size: 1.5em;
+          display: inline-block;
+          border-right: 2px solid rgba(0, 0, 0, 0.75);
+          white-space: nowrap;
+          overflow: hidden;
+          animation: typing 4s steps(40, end),
+            blink-caret 0.75s step-end infinite;
+          span {
+            color: var(--secondary-color);
+            text-transform: uppercase;
+          }
+        }
+        h5 {
+          font-size: 2rem;
+          font-weight: 300;
+        }
+        p {
+          font-size: 15px;
+        }
+        a {
+          span {
+            font-size: 1rem;
+            font-family: 400;
+          }
+        }
+      }
+    }
+  }
+}

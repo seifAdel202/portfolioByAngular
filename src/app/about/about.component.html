@@ -1,0 +1,21 @@
+<div class="about">
+  <div class="container about--container">
+    <div class="section-title col-lg-4">
+      <h2>About Me</h2>
+    </div>
+    <div class="about--content">
+      <p>
+        {{ aboutData.aboutMe || 'Default description if data is not available' }}
+      </p>
+      
+      <a
+        class="contact--button"
+        [href]="aboutData.linkedInLink || 'https://www.linkedin.com/in/seif-adel-133081313?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'"
+        target="_blank"
+      >
+        <fa-icon [icon]="faLinkedinIn" class="icon-wp"></fa-icon>
+        <span>LinkedIn Account</span>
+      </a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<section class="hero-section">
+  <div class="text-white container d-flex align-items-end justify-content-center fs-1 flex-column">
+    <div class="content-header">
+      <h2 class="autocomplete-text">
+        Hey, I'm <span>{{ heroData.name || 'Seif Aldeen Adel' }}</span>
+      </h2>
+      <h5>{{ heroData.titleHome || 'Full stack developer' }}</h5>
+      <p>{{ heroData.pForTitle || 'Creating innovative web solutions with expertise in Angular and Node.js' }}</p>
+      <a class="contact--button" 
+         [href]="heroData.cvLink || '../../assets/img/cv.cs1.pdf'" 
+         download="cv.cs1.pdf"
+         aria-label="Download CV">
+        <span>Download CV</span>
+        <fa-icon [icon]="faFile" class="icon-wp"></fa-icon>
+      </a>
+    </div>
+  </div>
+</section>
